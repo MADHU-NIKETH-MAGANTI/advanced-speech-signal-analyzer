@@ -136,44 +136,6 @@ This project connects theoretical concepts with a real-world speech signal.
 ---
 
 ## 🏗️ System Architecture
+## System Architecture
 
-```text
-             🎤 Microphone
-                  │
-                  ▼
-          Speech Recording
-                  │
-                  ▼
-        Signal Preprocessing
-        (DC Removal/Scaling)
-                  │
-        ┌─────────┴─────────┐
-        ▼                   ▼
- Time-Domain Analysis   Frequency Analysis
-        │                   │
-        ▼                   ▼
- RMS / ZCR              FFT / Spectrum
- Energy / Power         Spectral Features
-        │                   │
-        └─────────┬─────────┘
-                  ▼
-          Speech Processing
-                  │
-     ┌────────────┼────────────┐
-     ▼            ▼            ▼
-   VAD        Filtering      Convolution
-     │            │            │
-     ▼            ▼            ▼
-  Pauses       LP/HP/BP      Smoothing
-     │                         │
-     └────────────┬────────────┘
-                  ▼
-          Z-Transform Analysis
-                  │
-                  ▼
-        Speech Speed Analysis
-                  │
-                  ▼
-       ┌──────────────────────┐
-       │  Integrated Dashboard │
-       └──────────────────────┘
+![System Architecture](architecture.png)
